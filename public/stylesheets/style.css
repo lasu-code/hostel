@@ -1,8 +1,205 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  background-image: url('/images/homepage.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} 
+ul{
+  padding: 0px;
+  margin: 0px;
+}
+nav{
+  height: 50px;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  text-align: center;
+  background-color: #ffc1c1;
+}
+nav a{
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+
+}
+nav a:hover{
+  background-color: #b9ffff;
+  color: #ffb0b0;
+
+}
+nav ul{
+  list-style: none;
+  display: flex;
+
+}
+nav ul li ul{
+  display: block;
+  width: 600px;
+}
+ul{
+  padding-inline-start: 0px;
 }
 
-a {
-  color: #00B7FF;
+nav ul li{
+  width: 400px;
+  line-height: 50px;
+}
+nav ul ul li{
+  position: relative;
+  display: none;
+
+}
+nav ul li:hover ul li{
+  display: block;
+  transition: 0.9ms;
+}
+/*homepage style*/
+.homeNav{
+  
+  padding: 0px;margin: 0px;
+}
+
+
+a{
+   background-color: #ffc1c1;
+   color: white;
+   
+   text-align: center; 
+   text-decoration: none;
+   display: inline-block;
+   text-transform: uppercase;
+}
+
+/*student login style*/
+.studentLogin{
+   widows: 360px;
+   padding: 12% 0 0;
+   margin: auto;
+   border-radius: 10px;
+}
+.form{
+  position: relative;
+  z-index: 1;
+  background-color: #b9ffff;
+  max-width: 330px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  height: 300px;
+  text-align: center;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.log{
+  display: flex;
+  flex-direction: column;
+}
+.form input{
+  padding: 18px;
+  margin: 0 0 15px;
+  outline: 1;
+  font-size: 20px;
+  /* background-color: #ffcece; */
+  color: blue;
+  border-color: transparent;
+  width: 100%;
+  border: 0px;
+}
+
+a:active{
+  background-color: aqua;
+}
+
+/*admin login style*/
+#admin{
+  margin: auto;
+  width: 350px;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  background-color: #ffc1c1;
+  border-radius: 5px;
+  
+}
+#adminForm{
+  height: 300px;
+  
+   margin-top: 150px;
+   /* width: 280px;   */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+
+}
+#adminForm input{
+  padding: 15px;
+  margin: 19px;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 20px;
+}
+#adminSubmit{
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: #b9ffff;
+  color: #ffb0b0;
+}
+
+
+
+/* Admin DAshboard */
+body{
+  padding: 0px;
+  margin: 0px;
+}
+#adminDashboard{
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  height: 400px;
+  background-color: blue;
+}
+.dashLeft{
+  width: 300px;
+  color: red;
+}
+.dashRight{
+  color: green;
+}
+.signUp{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 550px;
+  margin-top: 10px;
+  align-content: center;
+  
+  
+}
+input.signUp{
+  color: #ffb0b0;
+  background: white;
+  width: 314px;
+  align-items: center;
+  cursor: pointer;
+  height: 43px;;
+  
+
+}
+.signUp{
+  color: white;
+  
+}
+#signup{
+  height: 600px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+input{
+  font-family: 'Times New Roman', Times, serif
 }

@@ -1,56 +1,41 @@
-// const mongoose = require('mongoose');
-
-// mongoose.connect('mongodb://localhost/hostel');
-// const db = mongoose.Connection;
-
-// const studentSchema = mongoose.Schema({
-//     name:{
-//         type:string,
-//     },
-//     matric:{
-//         type:Number
-//     },
-//     email:{
-
-//     }
-// })
-
-
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+let bcrypt = require('bcrypt');
 
-let userSchema = new Schema({
+let loginSchema = new Schema({
 
-    full_name:{type: String, required: [true, 'Full name must be provided']},
+    full_name:{type:String, required: [true, 'This field cannot be empty']},
+
+    matric:{type: String, required: [true, 'Matric number must be provided']},
     
-    email:    { 
-    
-        type: String,     
-    
-        Required:  'Email address cannot be left blank.',
-        
-        validate: [validateEmail, 'Please fill a valid email address'],
-             match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
-        index: {unique: true, dropDups: true}
-        
-        },
-    
-      password: { type: String , required: [true,  'Password cannot be left blank']},
-    
-    
+    password: { type: String  , required: [true,  'Password cannot be left blank'] },
+    address:{ type: String , required: [true,  'Address cannot be left blank']},
+    department: { type: String , required: [true,  'Department must be provided']},
+
+    email: {
+
+        type: String,
+
+        Required: 'Email address cannot be left blank.',
+
+        // validate: [validateEmail, 'Please fill a valid email address'],
+        // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
+        // index: {
+        //     unique: true,
+        //     dropDups: true
+        // }
+    },
+
 });
+loginSchema.pre('save',function(next){
+    let user = this;
+    bcrypt.hash(user.password,10,function(err,hash){
+        if(err){
+            next(err);
 
-let user = mongoose.model('emp', Schema);
-
-app.post('/', (req, res) => {
-    new user({
-        name : req.body.name,
-        password : req.body.password
-    }).save((err, doc) => {
-        if (err) res.json(err);
-        else  res.send('Successful!');
-    });
+        }user.password = hash;
+        next();
+    })
 });
-
-module.exports = mongoose.model('user', userSchema);
+let user = mongoose.model('student', loginSchema);
+module.exports = user

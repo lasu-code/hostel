@@ -3,9 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-let session =require('express-session')
+const session =require('express-session');
+const passport = require('passport');
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
+
+
+
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var adminRouter = require('./routes/admin');
 
 var mongoose = require('mongoose');
 
@@ -18,11 +27,41 @@ mongoose.connect('mongodb://localhost:27017/hostel');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(session({
-  secret:'welldone',
-  resave:true,
-  saveUninitialized:false
+
+// express session middleware
+   app.use(session({
+   secret:'welldone',
+   resave:true,
+   saveUninitialized:false,
+   cookie: { secure: true}
+ }));
+
+//express messages middleware
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
+
+//express validator middleware
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value){
+    var namespace = param.split('.'),
+    root  = namespace.shift()
+    , formParam = root;
+
+    while(namespace.length){
+      formParam += '[' + namespace.shift() + ']'
+    }
+    return {
+      param : formParam,
+      msg : msg,
+      value : value
+    };
+  }
 }));
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,6 +70,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let user = require('../models/student') ;
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'LASU HOSTEL MANAGEMENT' });
@@ -9,6 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/login', function(req, res, next) { 
   res.render('login', { title: 'HOSTEL' });
 });
+
 router.post('/login', function(req, res, next) { 
   if(body.req.email && req.body.password){
     user.authenticate(req.body.email,req.body.password,function(error,user){
@@ -29,9 +31,12 @@ router.post('/login', function(req, res, next) {
   
 });
 
+
+
 router.get('/signup', function(req, res, next) {
   res.render('signup', { title: 'HOSTEL' });
 });
+
 router.post('/signup', function(req, res, next) {
   if(req.body.name && 
     req.body.email &&
@@ -69,22 +74,78 @@ res.send('all field required');
 }
 });
 
+
+
 router.get('/updates', function(req, res, next) {
   res.render('updates', { title: 'HOSTEL' });
 });
 
+
+
 router.get('/admin', function(req, res, next) {
   res.render('admin', { title: 'HOSTEL' });
 });
+
+
 
 router.get('/studentdashboard', function(req, res, next) {
   res.render('student_dashboard', { title: 'HOSTEL' });
   
 });
 
+
+
+//admin pages
 router.get('/admindashboard', function(req, res, next) {
   res.render('admin_dashboard', { title: 'HOSTEL' });
 });
+
+
+router.get('/adminsignup', function(req, res, next) {
+  res.render('admin_signup', { title: 'NEW ADMIN SIGNUP ' });
+});
+
+
+
+router.get('/allocatedstudent', function(req, res, next) {
+  res.render('allocated_student', { title: 'ALLOCATED STUDENTS' });
+});
+
+
+
+router.get('/availablehostel', function(req, res, next) {
+  res.render('available_hostel', { title: 'AVAILABLE HOSTELS' });
+});
+
+
+
+router.get('/complain', function(req, res, next) {
+  res.render('complain', { title: 'STUDENT COMPLAIN' });
+});
+
+
+router.get('/newsupdate', function(req, res, next) {
+  res.render('news_update', { title: 'NEWS UPDATE' });
+});
+
+
+
+router.get('/hostelrequest', function(req, res, next) {
+  res.render('hostel_request', { title: 'HOSTEL REQUEST' });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = router;

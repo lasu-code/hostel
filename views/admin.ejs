@@ -1,45 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= title %>
-  </title>
-  <link rel="stylesheet" href="/stylesheets/materialize/css/materialize.css">
-  <link rel="stylesheet" href="/stylesheets/iconfont/material-icons.css">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body class="grey lighten-2">
-  <header class="navbar-fixed">
-    <nav class="light-blue z-depth-0 bottom-border">
-      <div class="nav-wrapper">
-        <div class="container">
-          <a href="#!" class="brand-logo ">
-            <%= title %>
-          </a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li class="left-border right-border"><a class="" href="/">HOME</a></li>
-            <li class="right-border"><a class="" href="/login">LOGIN</a></li>
-            <li class="right-border"><a class="" href="/signup">SIGNUP</a></li>
-            <li class="right-border active"><a class="" href="/admin">ADMIN</a></li>
-            <li class="right-border"><a class="" href="/updates">UPDATES</a></li>
-          </ul>
-        </div>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="/">HOME</a></li>
-          <li><a href="/login">LOGIN</a></li>
-          <li><a href="/signup">SIGNUP</a></li>
-          <li class="active"><a href="/admin">ADMIN</a></li>
-          <li><a href="/updates">UPDATES</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
+<% include homepartials/homehead %>
         <div class="container">
                 <div class="row">
                   <div class="col s12 m8 offset-m2 l6 offset-l3">
@@ -51,23 +10,25 @@
                         </div>
                       </div>
                       <div class="card-content">
-                        <form action="" class="row">
+                        <form action="/admin"  method='post' class="row">
                           <div class="input-field col s12">
-                            <input placeholder="" id="matric_number" type="email" data-length="9" class="validate">
-                            <label for="matric_number">EMAIL</label>
+                            <input placeholder="" id="name" type="text" name='name' class="validate">
+                            <label for="matric_number">NAME</label>
                           </div>
 
                           <div class="input-field col s12">
-                            <input placeholder="" id="surname" type="password" class="validate">
+                            <input placeholder="" id="surname" type="password" name='password' class="validate">
                             <label for="surname">PASSWORD</label>
+                          </div>
+
+                          <div class="center">
+                            <button class="btn light-blue border  waves-effect waves-light">
+                              proceed
+                            </button>
                           </div>
                         </form>
                         <!-- <div class="card-action"> -->
-                        <div class="center">
-                          <a href="#!" class="btn light-blue border  waves-effect waves-light">
-                            proceed
-                          </a>
-                        </div>
+                        
                         <br>
                         <div class="divider light-blue"></div>
                         <br>
@@ -82,51 +43,4 @@
                   </div>
                 </div>
               </div>
-  </main>
-
-  <footer class="page-footer top-border light-blue">
-      <div class="container">
-          <div class="row">
-              <div class="col l6 s12">
-                  <h5 class="">Footer Content</h5>
-                  <p class="">You can use rows and columns here to organize your footer
-                      content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                  <h5 class="">Links</h5>
-                  <ul>
-                      <li><a class="white-text" href="#!">Link 1</a></li>
-                      <li><a class="white-text" href="#!">Link 2</a></li>
-                      <li><a class="white-text" href="#!">Link 3</a></li>
-                      <li><a class="white-text" href="#!">Link 4</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-      <div class="footer-copyright">
-          <div class="container">
-              <span class="">© 2014 Copyright Text</span>
-              <a class=" right" href="#!">More Links</a>
-          </div>
-      </div>
-  </footer>
-  <style>
-    .mt-4 {
-      margin-top: 6%;
-    }
-  </style>
-  <script src="/stylesheets/materialize/js/jquery-3.2.1.js"></script>
-  <script src="/stylesheets/materialize/js/materialize.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.slider').slider();
-      $(".dropdown").dropdown({
-        belowOrigin: true,
-        hover: true
-      });
-      $(".button-collapse").sideNav();
-    });
-  </script>
-</body>
-
-</html>
+ <% include homepartials/homefooter %> 

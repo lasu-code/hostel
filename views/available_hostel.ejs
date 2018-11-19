@@ -1,90 +1,923 @@
-<!DOCTYPE html>
-<html>
+<% include partials/studenthead %>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="/stylesheets/materialize/css/materialize.css">
-    <link rel="stylesheet" href="/stylesheets/iconfont/material-icons.css">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<div id="diff">
+    <div id="available">
+        <div class="available"></div>
+        <p class="avail">AVAILABLE</p>
 
-<body class="grey lighten-2">
-        <header>
-                <nav>
-                    <div class="nav-wrapper">
-                        <div class="container">
-                                <a href="#!" class="brand-logo captialize"><%= title %></a>
-                                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                                <ul class="right hide-on-med-and-down">
-                                    <!-- <li><a href="sass.html"></a></li>
-                                    <li><a href="badges.html"></a></li>
-                                    <li><a href="collapsible.html"></a></li> -->
-                                    <li><a href="/">logout</a></li>
-                                </ul>
-                        </div>
+    </div>
+
+
+    <div id="pending">
+
+        <div class="pending"></div>
+        <p>PENDING</p>
+    </div>
+
+    <div id="taken">
+
+        <div class="taken"></div>
+        <p>TAKEN</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="rooms">
+
+    <div class="flat">
+
+        <p>FLAT 1</p>
+        <p>FLAT 2</p>
+        <p>FLAT 3</p>
+        <p>FLAT 4</p>
+        <p>FLAT 5</p>
+        <p>FLAT 6</p>
+        <p>FLAT 7</p>
+        <p>FLAT 8</p>
+        <p>FLAT 9</p>
+        <p>FLAT 10</p>
+        <p>FLAT 11</p>
+        <p>FLAT 12</p>
+
+
+
+    </div>
+
+
+    <div class="block1 block">
+        <h4>BLOCK 1</h4>
+        <div class="line ">
+            <button class="room taken">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room taken">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="block2 block">
+            <h4>BLOCK 2</h4>
+            <div class="line ">
+                <button class="room taken">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room taken">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+        </div>
+
+        
+
+
+        <div class="block3 block">
+                <h4>BLOCK 3</h4>
+                <div class="line ">
+                    <button class="room taken">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room taken">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+                <div class="line sec">
+                    <button class="room pending">ROOM 1</button>
+                    <button class="room">ROOM 2</button>
+                </div>
+        
+            </div>
+
+            
+
+
+            <div class="block4 block">
+                    <h4>BLOCK 4</h4>
+                    <div class="line ">
+                        <button class="room taken">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
                     </div>
-                </nav>
-            </header>
-    <ul id="slide-out" class="side-nav fixed">
-        <!-- <li><div class="user-view">
-                  <div class="background">
-                    <img src="images/office.jpg">
-                  </div>
-                  <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                  <a href="#!name"><span class="white-text name">John Doe</span></a>
-                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                </div></li> -->
-        <li><a href="#!"><i class="material-icons"></i></a></li>
-        <li><a href="#!"><i class="material-icons"></i></a></li>
-        <li><a class="subheader">ADMIN DASHBOARD</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/hostelrequest">HOSTEL REQUEST</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/allocatedstudent">ALLOCATED STUDENTS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/availablehostel">AVAILABLE HOSTELS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/complain">STUDENT COMPLAINTS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/newsupdate">NEWS UPDATES</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="adminsignup">ADD ANOTHER ADMIN</a></li>
-        <div class="divider"></div>
-    </ul>
-   
-    <main>
+            
+                    <div class="line sec">
+                        <button class="room">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room taken">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                </div>
 
-    </main>
-    <footer>
 
-    </footer>
-</body>
+
+                
+            <div class="block5 block">
+                    <h4>BLOCK 5</h4>
+                    <div class="line ">
+                        <button class="room taken">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room taken">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                </div>
+
+
+
+
+                
+            <div class="block6 block">
+                    <h4>BLOCK 6</h4>
+                    <div class="line ">
+                        <button class="room taken">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room taken">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+                    <div class="line sec">
+                        <button class="room pending">ROOM 1</button>
+                        <button class="room">ROOM 2</button>
+                    </div>
+            
+                </div>
+            
+
+    <!-- <div class="block2 block">
+        <h4>BLOCK 2</h4>
+        <div class="line ">
+            <p class="room taken">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room pending">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room taken">ROOM 1</p>
+            <p class="room pending">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room taken">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room taken">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="block3 block">
+        <h4>BLOCK 3</h4>
+        <div class="line ">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="block4 block">
+        <h4>BLOCK 4</h4>
+        <div class="line ">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="block5 block">
+        <h4>BLOCK 5</h4>
+        <div class="line ">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room taken">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room taken">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room pending">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room taken">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class=" pending room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room taken">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+        <div class="line sec">
+            <p class="room taken">ROOM 1</p>
+            <p class="room">ROOM 2</p>
+        </div>
+
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div>
+
+    <form action="/student/choosehostel" method="post" class="choose">
+
+        <div>
+            <label for="NAME">NAME</label>
+            <input type="text" name="name" id="">
+        </div>
+
+        <div>
+            <label for="DEPARTMENT">DEPARTMENT</label>
+            <input type="text" name="department" id="">
+        </div>
+
+
+        <div>
+            <label for="BLOCK">BLOCK</label>
+            <input type="number" name="block" id="">
+        </div>
+
+        <div>
+            <label for="FLAT">FLAT</label>
+            <input type="number" name="flat" id="">
+        </div>
+
+        <div>
+            <label for="ROOM">ROOM</label>
+            <input type="number" name="room" id="">
+        </div>
+
+        <div>
+            <input type="submit" value="SUBMIT">
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+
+
+
 <style>
-    header,
-    main,
-    footer {
-        padding-left: 300px;
+    button {
+        padding: 0px;
+        border: 0px;
     }
 
-    @media only screen and (max-width : 992px) {
+    .choose {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
 
-        header,
-        main,
-        footer {
-            padding-left: 0;
-        }
+    .sec {
+        padding-top: 12px;
+    }
+
+    #rooms {
+        display: flex;
+
+    }
+
+    .room {
+        margin-right: 3px;
+        background-color: #00b900;
+        padding-right: 8px;
+        padding-left: 4px;
+        height: 25px;
+        flex-flow: flex-wrap;
+    }
+
+    /* .room:hover{
+        show room
+
+    } */
+
+    #available {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    #pending {
+        display: flex;
+        margin: 10px;
+        align-items: center;
+        margin-left: 80px;
+    }
+
+    #taken {
+        display: flex;
+        margin: 10px;
+        align-items: center;
+        margin-left: 80px;
+    }
+
+    #diff {
+        display: flex;
+        margin-left: 194px;
+        /* align-items: center;       */
+
+    }
+
+    .line {
+        display: flex;
+        align-items: center;
+        justify-content: space-around
+    }
+
+    p.room {
+        margin-right: 4px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+
+    }
+
+    .flat {
+        padding-top: 54px;
+        margin-left: 20px;
+    }
+
+    .available {
+        background-color: #00b900;
+        width: 67px;
+        height: 25px;
+        margin-right: 20px;
+    }
+
+    .pending {
+        background-color: #ecec00;
+        width: 60px;
+        height: 25px;
+        margin-right: 20px;
+    }
+
+
+    .taken {
+        background-color: red;
+        width: 60px;
+        height: 25px;
+        margin-right: 20px;
+    }
+
+    .block {
+        margin-left: 30px;
     }
 </style>
-<script src="/stylesheets/materialize/js/jquery-3.2.1.js"></script>
-<script src="/stylesheets/materialize/js/materialize.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".button-collapse").sideNav();
-    });
-</script>
-</body>
 
-</html>
+<!-- <div>
+
+    
+        <form>
+                <input type="button" id='b1f1' value="B1F1" onclick="picked()">
+                <input type="button" value="B1F2">
+                <input type="button" value="B1F3">
+                <input type="button" value="B1F4">
+        </form>
+
+        <div>
+                <form action="/student/choosehostel" id="form1" method="post" class="choose" hidden>
+            
+                    <div>
+                        <label for="NAME">NAME</label>
+                        <input type="text" name="name" id="">
+                    </div>
+            
+                    <div>
+                        <label for="DEPARTMENT">DEPARTMENT</label>
+                        <input type="text" name="department" id="">
+                    </div>
+                    
+            
+                    <div>
+                        <label for="BLOCK">BLOCK</label>
+                        <input type="number" name="block" id="">
+                    </div>
+            
+                    <div>
+                        <label for="FLAT">FLAT</label>
+                        <input type="number"< name="flat" id="">
+                    </div>
+            
+                    <div>
+                        <label for="ROOM">ROOM</label>
+                        <input type="number" name="room" value= id="">
+                    </div>
+            
+                    <div>
+                    
+                        <input type="submit" value="SUBMIT" onclick="handleInactive()">
+                    </div>
+                    
+                </form>       
+            </div>
+         -->
+
+<script src='/javascripts/available_hostel.js'>
+
+
+</script>
+
+</div>
+
+
+
+<% include partials/studentfooter %>

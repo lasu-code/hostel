@@ -1,13 +1,14 @@
-<% include homepartials/homehead %>
+<% include partials/head %>
         <div class="container">
             <div class="col s12">
                 <div class="card">
                     <div class="card-content">
-                        <h4 class="page-header uppercase">UPDATES</h4>
+                        <h4 class="page-header uppercase">news</h4>
                         <div class="divider"></div>
                         <br>
                         <% for(let i=0; i < news.length; i++) { %>
                         <ul>
+                            <br><br><br>
                             
                                 <h5> <%= news[i].heading %></h5> 
                             
@@ -19,23 +20,26 @@
                             <li>
                                 <%= news[i].createdDate %>
                             </li>
+                            
+                            <form action="/admin/deletenews" method="POST">
+                                <input type="hidden" name="newsId" value=<%= news[i]._id %> >
+                                <button>DELETE NEWS</button>
+                            </form>
+                            <form action="/admin/editnews" method="PUT">
+                                <input type="text" name="header" />
+                                <input type="text" name="body" />
+                                <button>EDIT NEWS</button>
+                            </form>
+                            <hr>
 
-
-
-
-                        </ul>
-
+                            </ul>
                         <% } %>
                         <br>
                         <div class="divider"></div>
                     </div>
                 </div>
 
-
-
-
-
-            </div>
+               </div>
         </div>
-        <% include homepartials/homefooter %>
+        <% include partials/footer %>
         

@@ -1,90 +1,120 @@
-<!DOCTYPE html>
-<html>
+<% include partials/head %>
+<% for(let i=0; i < Request.length; i++) { %>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="/stylesheets/materialize/css/materialize.css">
-    <link rel="stylesheet" href="/stylesheets/iconfont/material-icons.css">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<div class="adminrequest">
+       
+    <div class="request">
+            
+        <ul>
+            <li class="name"><%= Request[i].names %></li>
+            <li class="dept"><%= Request[i].departments %></li>
+            <li class="blk"><%= Request[i].blocks %></li>
+            <li class="flat"> <%= Request[i].flats %> </li>
+            <li class="room"> <%= Request[i].rooms %> </li>
+            <li></li>
+        </ul>   
+    </div>
+  
 
-<body class="grey lighten-2">
-        <header>
-                <nav>
-                    <div class="nav-wrapper">
-                        <div class="container">
-                                <a href="#!" class="brand-logo captialize"><%= title %></a>
-                                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                                <ul class="right hide-on-med-and-down">
-                                    <!-- <li><a href="sass.html"></a></li>
-                                    <li><a href="badges.html"></a></li>
-                                    <li><a href="collapsible.html"></a></li> -->
-                                    <li><a href="/">logout</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-    <ul id="slide-out" class="side-nav fixed">
-        <!-- <li><div class="user-view">
-                  <div class="background">
-                    <img src="images/office.jpg">
-                  </div>
-                  <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                  <a href="#!name"><span class="white-text name">John Doe</span></a>
-                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                </div></li> -->
-        <li><a href="#!"><i class="material-icons"></i></a></li>
-        <li><a href="#!"><i class="material-icons"></i></a></li>
-        <li><a class="subheader">ADMIN DASHBOARD</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/hostelrequest">HOSTEL REQUEST</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/allocatedstudent">ALLOCATED STUDENTS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/availablehostel">AVAILABLE HOSTELS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/complain">STUDENT COMPLAINTS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/newsupdate">NEWS UPDATES</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="adminsignup">ADD ANOTHER ADMIN</a></li>
-        <div class="divider"></div>
-    </ul>
-   
-    <main>
 
-    </main>
-    <footer>
 
-    </footer>
-</body>
+    
+       
+
+        
+    
+    <div id="adminbotton">    
+            <form action=""><input id="accept" class="btn" type="submit" value="ACCEPT" ></form>
+            <form action=""><input id="decline" class="btn" type="submit" value="DECLINE"></form>
+              
+    </div>
+
+
+
+
+
+
+</div>
+<% } %>
+
+
+
+
 <style>
-    header,
-    main,
-    footer {
-        padding-left: 300px;
+    #adminbotton{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 6px;
+        align-content: flex-end;
+    }
+    
+    #accept{
+        height: 34px;
+        padding: 0px;
+        width: 65px;
+        margin-right: 5px;  
+        background-color: #009100;
+    }
+    #accept:hover{
+        background-color: #006a00;
+    }
+    
+    #decline{
+        height: 34px;
+        padding: 0px;
+        width: 70px;
+        background-color: #ee6e73;
+
+    }
+    #decline:hover{
+        background-color: #e7323c;
+        transition: 0.4s;
+    }
+    .adminrequest {
+        font-size: 16px;
+        padding-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        margin-left: 159px;
+        margin-right: 100px;
+        width: 733px;
+        display: flex;
+        border-radius: 4px;
+        border: 2px solid #f07b82;
     }
 
-    @media only screen and (max-width : 992px) {
+  
+    .request {
+        display: flex;
 
-        header,
-        main,
-        footer {
-            padding-left: 0;
-        }
+
+
+
     }
+
+    .request ul {
+        display: flex;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        padding-bottom: 3px;
+
+
+    }
+
+    .request ul li {
+        margin-right: 20px;
+
+
+    }
+    .name{
+        width: 205px;
+    }
+    .dept{
+        width: 210px;
+    }
+
 </style>
-<script src="/stylesheets/materialize/js/jquery-3.2.1.js"></script>
-<script src="/stylesheets/materialize/js/materialize.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".button-collapse").sideNav();
-    });
-</script>
-</body>
-
-</html>
+<% include partials/footer %>

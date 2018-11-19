@@ -1,0 +1,83 @@
+<% include partials/head %>
+
+<div id="adminnews">
+    <form action="/admin/postnews" method="POST">
+
+        <textarea placeholder="ENTER NEWS HEADING HERE" class="newsheading" required="required" name="header" id=""
+            cols="2" rows="1"></textarea>
+
+        </textarea>
+
+        <textarea placeholder="ENTER NEWS CONTENT HERE" name="news" id="input" class="form-control newsupdate" required="required"></textarea>
+
+        <input type="submit" value="UPLOAD" id="submitnews">
+
+
+    </form>
+</div>
+<style>
+    /* header,
+    main,
+    footer {
+        padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+
+        header,
+        main,
+        footer {
+            padding-left: 0;
+        }
+    } */
+
+
+    #adminnews {
+        padding: 90px;
+        padding-top: 50px;
+        padding-right: 100px;
+
+    }
+
+    .newsheading {
+        background-color: white;
+        font-size: 25px;
+        text-transform: uppercase;
+        word-spacing: 7px;
+        letter-spacing: 8px;
+        padding-left: 30px;
+        border: 1px solid #ee6e73;
+
+    }
+
+    .newsupdate {
+        background-color: white;
+        height: 320px;
+        font-size: 18px;
+        word-spacing: 4px;
+        letter-spacing: 4px;
+        padding-left: 30px;
+        border: 1px solid #ee6e73;
+    }
+
+    #submitnews {
+        width: 150px;
+        color: #ee6e73;
+        font-size: 20px;
+        height: 35px;
+        font-weight: bolder;
+        letter-spacing: 5px;
+        border-style: none;
+        background-color: white;
+        border: 1.5px solid #ee6e73;
+        ;
+    }
+
+    #submitnews:hover {
+        background-color: #ee6e73;
+        color: white;
+        border: 0px;
+
+    }
+</style>
+<% include partials/footer %>

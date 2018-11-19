@@ -1,90 +1,35 @@
-<!DOCTYPE html>
-<html>
+<% include partials/head %>
+<form action="/admin/adminsignup" method="POST" class="row">
+    <div class="input-field col s6">
+        <input placeholder="" id="Surname" name="name" type="text" class="validate">
+        <label for="Surname">FULL NAME</label>
+    </div>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="/stylesheets/materialize/css/materialize.css">
-    <link rel="stylesheet" href="/stylesheets/iconfont/material-icons.css">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
 
-<body class="grey lighten-2">
-        <header>
-                <nav>
-                    <div class="nav-wrapper">
-                        <div class="container">
-                                <a href="#!" class="brand-logo captialize"><%= title %></a>
-                                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-                                <ul class="right hide-on-med-and-down">
-                                    <!-- <li><a href="sass.html"></a></li>
-                                    <li><a href="badges.html"></a></li>
-                                    <li><a href="collapsible.html"></a></li> -->
-                                    <li><a href="/">logout</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-    <ul id="slide-out" class="side-nav fixed">
-        <!-- <li><div class="user-view">
-                  <div class="background">
-                    <img src="images/office.jpg">
-                  </div>
-                  <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                  <a href="#!name"><span class="white-text name">John Doe</span></a>
-                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                </div></li> -->
-        <li><a href="#!"><i class="material-icons"></i></a></li>
-        <li><a href="#!"><i class="material-icons"></i></a></li>
-        <li><a class="subheader">ADMIN DASHBOARD</a></li>
-        <div class="divider"></div>
-        <li class="right-border" ><a class="waves-effect" href="/hostelrequest">HOSTEL REQUEST</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/allocatedstudent">ALLOCATED STUDENTS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/availablehostel">AVAILABLE HOSTELS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/complain">STUDENT COMPLAINTS</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="/newsupdate">NEWS UPDATES</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="adminsignup">ADD ANOTHER ADMIN</a></li>
-        <div class="divider"></div>
-    </ul>
-   
-    <main>
 
-    </main>
-    <footer>
+    <div class="input-field col s6">
+        <input placeholder="" name="email" id="Student Email" type="email" class="validate">
+        <label for="Student Email">EMAIL</label>
+    </div>
 
-    </footer>
-</body>
-<style>
-    header,
-    main,
-    footer {
-        padding-left: 300px;
-    }
 
-    @media only screen and (max-width : 992px) {
 
-        header,
-        main,
-        footer {
-            padding-left: 0;
-        }
-    }
-</style>
-<script src="/stylesheets/materialize/js/jquery-3.2.1.js"></script>
-<script src="/stylesheets/materialize/js/materialize.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".button-collapse").sideNav();
-    });
-</script>
-</body>
+    <div class="input-field col s12">
+        <input placeholder="" id="surname" name="password" type="password" class="validate">
+        <label for="surname">PASSWORD</label>
+      </div>
+      <div class="input-field col s12">
+        <input placeholder="" id="surname" name="confirmpassword" type="password" class="validate">
+        <label for="surname">COMFORM PASSWORD</label>
+      </div>
 
-</html>
+
+    <div class="center input-field col s12">
+        <input class="btn  light-blue  waves-effect" value="SIGN UP" type="submit" />
+        
+        
+    </div>
+</form>
+
+
+<% include partials/footer %>

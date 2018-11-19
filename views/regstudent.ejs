@@ -1,0 +1,73 @@
+<% include partials/head %>
+<div class="container">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <h4 class="page-header uppercase">STUDENTS</h4>
+                <div class="divider"></div>
+                <br>
+                <% for(let i=0; i < students.length; i++) { %>
+                <ul class="regstud">
+                    <li>
+                        <h5>
+                            <%= students[i].full_name %>
+                        </h5>
+                    </li>
+
+
+                    <li>
+
+                        <h6>
+                            <%= students[i].matric %>
+                        </h6>
+                    </li>
+                    <li>
+
+                        <h6>
+                            <%= students[i].address %>
+                        </h6>
+                    </li>
+                    <li>
+
+                        <h6>
+                            <%= students[i].email %>
+                        </h6>
+                    </li>
+                    <li>
+
+                        <h6>
+                            <%= students[i].department %>
+                        </h6>
+                    </li>
+
+                    <li>
+                        <%= students[i].createdDate %>
+                    </li>
+
+                    <div class="divider"></div>
+
+
+                </ul>
+
+                <% } %>
+                <br>
+                
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+<style>
+.regstud{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}  
+    </style>
+<% include partials/footer %>

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-let bcrypt = require('bcrypt');
+let bcrypt = require('bcryptjs');
 
 let loginSchema = new Schema({
 
@@ -13,6 +13,7 @@ let loginSchema = new Schema({
     department: { type: String , required: [true,  'Department must be provided']},
 
     email: {
+        unique:true,
 
         type: String,
 

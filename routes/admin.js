@@ -5,7 +5,8 @@ let News = require('../models/news');
 let complaint = require('../models/complaint');
 let Request = require('../models/request');
 
-
+const adminController = require('../controllers/adminController');
+const studentController = require('../controllers/studentController');
 /* GET home page. */
 
 // get admin  sign uppage
@@ -134,13 +135,7 @@ router.put('/editnews',function(req, res,next) {
 
 
 
-router.get('/hostelrequest', function(req, res, next) {
-  Request.find().then(function(request) {
-    // console.log(tweets);
-    res.render('hostel_request', { title: 'News', Request: request });
-  });
-
-});
+router.get('/hostelrequest', adminController.hostelRequest);
 
 router.get('/allocatedstudent', function(req, res, next){
   res.render('allocated_student', {title: 'Allocated Student'});
@@ -157,5 +152,7 @@ router.get('/availablehostel', function (req, res, next) {
 })
 
 
+router.post('/accept_request', adminController.acceptRequest);
+router.post('/reject_request', adminController.rejectRequest);
  
 module.exports = router;

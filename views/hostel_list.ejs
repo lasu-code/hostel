@@ -1,5 +1,6 @@
 <% include partials/studenthead %>
 
+
 <div id="diff">
     <div id="available">
         <div class="available"></div>
@@ -12,10 +13,6 @@
 
         <div class="pending"></div>
         <p>PENDING</p>
-    </div>
-
-    <div id="pending">
-        <button class="room" onclick="payWithPaystack()"> Pay </button>
     </div>
 
     <div id="taken">
@@ -51,11 +48,138 @@
 
     </div>
 
+    <% for(var i=0; i < hostel_details.length; i++) { %>
+       
+
+        <div class="block1 block">
+            <h4>BLOCK <%= hostel_details[i].block %></h4>
+            <div class="line ">
+                <button class="room taken" onclick="selectHostel('1', 'AJAO', '1', '1', 'ECE')">ROOM <%= hostel_details[i].room %></button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room taken">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+            <div class="line sec">
+                <button class="room pending">ROOM 1</button>
+                <button class="room">ROOM 2</button>
+            </div>
+    
+        </div>
+
+     <% } %>
+
 
     <div class="block1 block">
         <h4>BLOCK 1</h4>
         <div class="line ">
-            <button class="room taken" onclick="selectHostel('1', 'AJAO', '1', '1', 'ECE')">ROOM 1</button>
+            <button class="room taken" onclick="selectHostel()">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room taken">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+        <div class="line sec">
+            <button class="room pending">ROOM 1</button>
+            <button class="room">ROOM 2</button>
+        </div>
+
+    </div>
+
+    <div class="block1 block">
+        <h4>BLOCK 1</h4>
+        <div class="line ">
+            <button class="room taken">ROOM 1</button>
             <button class="room">ROOM 2</button>
         </div>
 
@@ -713,45 +837,10 @@
 
 </div>
 
-
-<!-- 
 <div>
 
-    <form action="/student/choosehostel" method="post" class="choose">
 
-        <div>
-            <label for="NAME">NAME</label>
-            <input type="text" name="name" id="">
-        </div>
-
-        <div>
-            <label for="DEPARTMENT">DEPARTMENT</label>
-            <input type="text" name="department" id="">
-        </div>
-
-
-        <div>
-            <label for="BLOCK">BLOCK</label>
-            <input type="number" name="block" id="">
-        </div>
-
-        <div>
-            <label for="FLAT">FLAT</label>
-            <input type="number" name="flat" id="">
-        </div>
-
-        <div>
-            <label for="ROOM">ROOM</label>
-            <input type="number" name="room" id="">
-        </div>
-
-        <div>
-            <input type="submit" value="SUBMIT">
-        </div>
-    </form>
-
-
-</div> -->
+</div>
 
 
 
@@ -917,16 +1006,15 @@
             </div>
          -->
 
-         <form action="/student/create_hostel_request" method="post" id="create_hostel_request">
+         <form action="/create_hostel_request" method="post" id="create_hostel_request">
             <input type="hidden" name="block" id="blockID" value="">
-            <input type="hidden" name="name" id="studentName" value="">
+            <input type="hidden" name="name" id="StudentName" value="">
             <input type="hidden" name="flat" id="flatID" value="">
             <input type="hidden" name="room" id="roomID" value="">
             <input type="hidden" name="department" id="department" value="">
         </form>
 
-        <script src="https://js.paystack.co/v1/inline.js"></script>
-        <script src='/javascripts/available_hostel.js'>
+<script src='/javascripts/available_hostel.js'>
 
 
 </script>

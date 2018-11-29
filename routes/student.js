@@ -4,7 +4,9 @@ let student = require('../models/student') ;
 let News = require('../models/news');
 let complaint = require('../models/complaint');
 let Request = require('../models/request');
+let Hostel = require('../models/hostel');
 
+const studentController = require('../controllers/studentController');
 
 /* GET sign up form. */
 
@@ -168,5 +170,31 @@ router.get('/availablehostel', function(req, res, next){
   res.render('available_hostel', {title: 'Available Hostel'});
 });
 
+router.get('/hostel_list', function(req, res, next){
+  // Hostel.aggregate()
+  // Hostel.aggregate([{ $match }, { $skip }], 
+  //   {$group: {_id:'$block'}}, function(err, hostels) {
+  //     console.log(hostels)
+  //   res.render('hostel_list', {title: 'Available Hostel', hostels: hostels});
+  // });
+  Hostel.find().then(function(hostels) {
+    let hostel_details = {}
+    for (let i = 0; i < hostels.length; i++) {
+      // const element = hostels[i];
+      hostel_details[hostels[i].block] = []
+      hostel_details[hostels[i].block].push({room: hostels[i].room})
+      hostel_details[hostels[i].block].push({flat: hostels[i].flat})
+      hostel_details[hostels[i].block].push({student: hostels[i].student})  
+    }
+    console.log(hostel_details);
+    res.render('hostel_list', {title: 'Available Hostel', hostels: hostels, hostel_details: hostel_details});
+  });
+
+});
+
+
+
+
+router.post('/create_hostel_request', studentController.requestHostel);
 
 module.exports = router;

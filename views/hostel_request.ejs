@@ -1,32 +1,31 @@
 <% include partials/head %>
-<% for(let i=0; i < Request.length; i++) { %>
+<% for(let i=0; i < request.length; i++) { %>
 
 <div class="adminrequest">
        
     <div class="request">
             
         <ul>
-            <li class="name"><%= Request[i].names %></li>
-            <li class="dept"><%= Request[i].departments %></li>
-            <li class="blk"><%= Request[i].blocks %></li>
-            <li class="flat"> <%= Request[i].flats %> </li>
-            <li class="room"> <%= Request[i].rooms %> </li>
+            <li class="name"><%= request[i].name %></li>
+            <li class="dept"><%= request[i].department %></li>
+            <li class="blk">Block <%= request[i].block %></li>
+            <li class="flat">Flat <%= request[i].flat %> </li>
+            <li class="room">Room <%= request[i].room %> </li>
             <li></li>
         </ul>   
-    </div>
-  
-
-
-
-    
-       
+    </div>     
 
         
     
     <div id="adminbotton">    
-            <form action=""><input id="accept" class="btn" type="submit" value="ACCEPT" ></form>
-            <form action=""><input id="decline" class="btn" type="submit" value="DECLINE"></form>
-              
+            <form action="/admin/accept_request" method="POST">
+            <input id="accept" class="btn" type="hidden" value="<%= request[i]._id %>" name="requestID" >
+            <input id="accept" class="btn" type="submit" value="ACCEPT" name="acceptBtn" >
+        </form>
+            <form action="/admin/reject_request" method="POST">
+                <input id="decline" class="btn" type="submit" value="DECLINE" name="declineBtn">
+                <input id="decline" class="btn" type="hidden" value="<%= request[i]._id %>" name="requestID">
+            </form>          
     </div>
 
 
@@ -117,4 +116,5 @@
     }
 
 </style>
+<script src='/javascripts/available_hostel.js'></script>
 <% include partials/footer %>

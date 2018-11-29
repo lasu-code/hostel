@@ -3,6 +3,7 @@ var router = express.Router();
 let student = require('../models/student') ;
 let News = require('../models/news');
 let complaint = require('../models/complaint');
+const studentController = require('../controllers/studentController');
 
 
 /* GET home page. */
@@ -227,6 +228,9 @@ next(err);
 }
  
 });
+
+router.post('/create_hostel_request', studentController.requestHostel);
+
 
 
  
